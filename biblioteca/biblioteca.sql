@@ -1,6 +1,3 @@
--- Active: 1754568219041@@127.0.0.1@5432@biblioteca
-BEGIN TRANSACTION;
-
 CREATE TABLE libros (
     id_libro INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     codigo_libro CHARACTER VARYING(25) unique not null,
@@ -26,5 +23,3 @@ CREATE TABLE prestamos (
     fecha_devolucion DATE,
     estado CHARACTER VARYING(20) NOT NULL CHECK (estado IN ('prestado', 'devuelto'))
 );
-
-COMMIT;
