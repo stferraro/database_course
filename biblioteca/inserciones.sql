@@ -10,11 +10,20 @@ INSERT INTO libros (codigo_libro, titulo, autor, anio_publicacion, genero) VALUE
 SELECT * FROM libros;
 select anio_publicacion as año, autor  from libros where titulo = 'Rayuela';
 
-INSERT INTO usuarios (nombre, email, cedula, telefono) VALUES
-('Ana Pérez', 'ana.perez@example.com','V-15693289', '04141234567'),
-('Carlos Gómez', 'carlos.gomez@example.com', 'V-12345678', '04142345678'),
-('María Rodríguez', 'maria.rodriguez@example.com', 'V-87654321', '04143456789'),
-('Luis Fernández', 'luis.fernandez@example.com', 'V-23456789', '04144567890'),
-('Sofía Martínez', 'sofia.martinez@example.com', 'V-34567890', '04145678901');
+SELECT * FROM usuarios;
+
+insert into prestamos (id_libro, id_usuario, fecha_prestamo, fecha_devolucion, estado)values(1, 2, '2024-06-01', '2024-06-15', 'devuelto');
+insert into prestamos (id_libro, id_usuario, fecha_prestamo, fecha_devolucion, estado)values(2, 2, '2024-06-01', '2024-06-15', 'prestado');
+
+insert into prestamos (id_libro, id_usuario, fecha_prestamo, fecha_devolucion, estado)values(5, 4, '2026-07-02', '2026-09-15', 'prestado');
+
+insert into prestamos (id_libro, id_usuario, fecha_prestamo, fecha_devolucion, estado)values(5, 5, '2024-06-01', '2024-06-15', 'devuelto');
+
+insert into prestamos (id_libro, id_usuario, fecha_prestamo, fecha_devolucion, estado)values(3, 3, '2024-06-01', '2024-06-15', 'devuelto');
+
+insert into prestamos (id_libro, id_usuario, fecha_prestamo, fecha_devolucion, estado)values(1, 3, '2024-06-01', '2024-06-15', 'devuelto');
+
+
+SELECT * FROM prestamos;
 
 
